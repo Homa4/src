@@ -24,10 +24,13 @@ function handleClick(event) {
     if (event.target === gallery) {
         return;
     }
-    let lightbox = new SimpleLightbox('.gallery a',{captions:true,});
+    let lightbox = new SimpleLightbox('.gallery a',{
+        captionsData: "alt",
+        captionPosition: "bottom",
+        captionDelay: 250,});
     lightbox.on('show.simplelightbox', function () {
         // do something…
-        lightbox.captionPosition
+        
     });  
 }
 
